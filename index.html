@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybercrime Case Analysis & Digital Ethics Portfolio</title>
+    <meta name="description" content="An interactive web application showcasing cybercrime analysis, digital ethics, and legal frameworks based on the I4C Cyber Digest.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-mode">
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <div class="brand-logo">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <div class="brand-text">
+                    <h2>I4C Digest</h2>
+                    <span>Ethics & Laws Portfolio</span>
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active" data-tab="dashboard-tab" id="nav-dashboard">
+                        <i class="fa-solid fa-chart-line"></i>
+                        <span>Dashboard</span>
+                    </li>
+                    <li data-tab="cases-tab" id="nav-cases">
+                        <i class="fa-solid fa-folder-open"></i>
+                        <span>Case Studies</span>
+                    </li>
+                    <li data-tab="laws-tab" id="nav-laws">
+                        <i class="fa-solid fa-gavel"></i>
+                        <span>Law Mapper</span>
+                    </li>
+                    <li data-tab="simulator-tab" id="nav-simulator">
+                        <i class="fa-solid fa-gamepad"></i>
+                        <span>Threat Simulator</span>
+                    </li>
+                    <li data-tab="chatbot-tab" id="nav-chatbot">
+                        <i class="fa-solid fa-robot"></i>
+                        <span>Cyber Advisor</span>
+                    </li>
+
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <div class="user-profile">
+                    <div class="avatar">
+                        <i class="fa-solid fa-user-graduate"></i>
+                    </div>
+                    <div class="user-info">
+                        <h4 id="display-student-name">Student Name</h4>
+                        <span id="display-enrollment">Enrollment No</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <header class="top-header">
+                <div class="page-title">
+                    <span id="breadcrumb">MDC5011C / Semester 7 / Assignment 1</span>
+                    <h1 id="header-title">Overview Dashboard</h1>
+                </div>
+                <div class="header-actions">
+                    <button class="btn btn-primary" id="open-config-btn" title="Configure Student Details">
+                        <i class="fa-solid fa-user-gear"></i> Set Student Info
+                    </button>
+                </div>
+            </header>
+
+            <!-- TAB 1: DASHBOARD -->
+            <section id="dashboard-tab" class="tab-content active">
+                <div class="welcome-banner">
+                    <div class="banner-text">
+                        <h2>Cybercrime Case Analysis & Responsible Technology Solutions</h2>
+                        <p>An interactive digital portfolio analyzing 5 major cyber incident models from the Indian Cyber Crime Coordination Centre (I4C) Cyber Digest under legal frameworks and digital ethics guidelines.</p>
+                    </div>
+                    <div class="banner-badge">
+                        <i class="fa-solid fa-brain-circuit"></i>
+                    </div>
+                </div>
+
+                <!-- Stats Grid -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon icon-red">
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>5</h3>
+                            <span>Critical Cases Analyzed</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon icon-blue">
+                            <i class="fa-solid fa-scale-balanced"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>3+</h3>
+                            <span>Legal Acts Mapped</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon icon-green">
+                            <i class="fa-solid fa-lock"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>20+</h3>
+                            <span>Safety Recommendations</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon icon-yellow">
+                            <i class="fa-solid fa-check-double"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>100%</h3>
+                            <span>Ethical Adherence</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Split Layout -->
+                <div class="dashboard-split">
+                    <!-- Left: Project Overview -->
+                    <div class="dashboard-panel panel-left">
+                        <h2><i class="fa-solid fa-info-circle"></i> Project Scope & Objectives</h2>
+                        <p>This academic project implements a comprehensive threat intelligence and ethical evaluation framework. By focusing on recent real-world vectors documented by the MHA Cyber Dost initiative, it aims to:</p>
+                        <ul class="styled-list">
+                            <li><strong>Deconstruct Modus Operandi:</strong> Analyze how social engineering, identity cloning, and technical exploits bypass defense perimeters.</li>
+                            <li><strong>Map Cyber Jurisprudence:</strong> Align modern incidents with specific punitive provisions under the <em>Information Technology Act, 2000</em>, <em>Bharatiya Nyaya Sanhita (BNS), 2023</em>, and data protections under the <em>DPDP Act, 2023</em>.</li>
+                            <li><strong>Evaluate Digital Ethics:</strong> Analyze systemic failures in data custody, violations of bodily and behavioral privacy, and coercive psychological manipulation.</li>
+                            <li><strong>Recommend Responsible Tech:</strong> Formulate specific preventive policies for developers, institutions, and individual citizens.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Right: Quick Cases Access -->
+                    <div class="dashboard-panel panel-right">
+                        <h2><i class="fa-solid fa-fire-flame-curved"></i> Threat Landscape Explorer</h2>
+                        <div class="case-quick-list" id="dashboard-cases-list">
+                            <!-- Populated dynamically via JS -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TAB 2: CASE STUDIES -->
+            <section id="cases-tab" class="tab-content">
+                <div class="cases-layout">
+                    <!-- Case Selector Sidebar -->
+                    <div class="cases-sidebar">
+                        <h3>Select Case</h3>
+                        <div class="case-tabs-list" id="case-selector-list">
+                            <!-- Populated dynamically via JS -->
+                        </div>
+                    </div>
+                    <!-- Case Detail Display -->
+                    <div class="case-detail-container" id="case-detail-view">
+                        <!-- Populated dynamically via JS -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- TAB 3: LAW MAPPER -->
+            <section id="laws-tab" class="tab-content">
+                <div class="section-desc">
+                    <h2>Interactive Cyber Law Reference Mapper</h2>
+                    <p>Search, filter, and reference critical clauses of the <strong>Information Technology Act, 2000</strong>, <strong>DPDP Act, 2023</strong>, and the <strong>Bharatiya Nyaya Sanhita, 2023 (formerly IPC)</strong> mapping directly to our cybercrime case studies.</p>
+                </div>
+
+                <div class="search-filter-bar">
+                    <div class="search-box">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" id="law-search-input" placeholder="Search sections, keywords, or penalties...">
+                    </div>
+                    <div class="filter-box">
+                        <button class="filter-btn active" data-filter="all">All Acts</button>
+                        <button class="filter-btn" data-filter="it-act">IT Act, 2000</button>
+                        <button class="filter-btn" data-filter="dpdp-act">DPDP Act, 2023</button>
+                        <button class="filter-btn" data-filter="bns-act">BNS, 2023</button>
+                    </div>
+                </div>
+
+                <div class="laws-grid" id="laws-display-grid">
+                    <!-- Populated dynamically via JS -->
+                </div>
+            </section>
+
+            <!-- TAB 4: THREAT SIMULATOR -->
+            <section id="simulator-tab" class="tab-content">
+                <div class="simulator-wrapper">
+                    <!-- Intro View -->
+                    <div class="simulator-card active" id="sim-intro">
+                        <div class="sim-icon">
+                            <i class="fa-solid fa-user-shield"></i>
+                        </div>
+                        <h2>Interactive Threat Awareness Simulator</h2>
+                        <p>Test your cybersecurity and threat detection skills with five scenarios based on actual I4C Cyber Digest cases. Learn to detect red flags and make responsible ethical and legal decisions.</p>
+                        <button class="btn btn-primary btn-large" id="start-sim-btn">Start Simulation</button>
+                    </div>
+
+                    <!-- Question View -->
+                    <div class="simulator-card" id="sim-question-card">
+                        <div class="sim-header">
+                            <span id="sim-progress">Scenario 1 of 5</span>
+                            <div class="sim-timer-bar"><div class="sim-timer-fill" id="sim-timer-fill"></div></div>
+                        </div>
+                        <h3 id="sim-question-title">Scenario Title</h3>
+                        <p id="sim-question-text">Scenario narrative goes here...</p>
+                        
+                        <div class="sim-options" id="sim-options-container">
+                            <!-- Populated dynamically via JS -->
+                        </div>
+                    </div>
+
+                    <!-- Explanation View -->
+                    <div class="simulator-card" id="sim-explanation-card">
+                        <div class="sim-feedback-icon" id="sim-feedback-icon"></div>
+                        <h3 id="sim-feedback-title">Correct / Incorrect</h3>
+                        <p id="sim-explanation-text">Explanation narrative...</p>
+                        
+                        <div class="sim-ethical-impact" id="sim-ethical-impact">
+                            <!-- Ethical details -->
+                        </div>
+                        
+                        <button class="btn btn-primary" id="next-sim-btn">Next Scenario</button>
+                    </div>
+
+                    <!-- Score View -->
+                    <div class="simulator-card" id="sim-score-card">
+                        <div class="sim-score-circle">
+                            <span id="sim-score-value">0/5</span>
+                        </div>
+                        <h2 id="sim-score-title">Simulation Completed!</h2>
+                        <p id="sim-score-text">Score feedback message...</p>
+                        
+                        <div class="sim-score-actions">
+                            <button class="btn btn-secondary" id="restart-sim-btn">Retry Simulator</button>
+                            <button class="btn btn-primary" id="view-cases-from-sim-btn">Review Case Files</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TAB 5: AI CYBER ADVISOR -->
+            <section id="chatbot-tab" class="tab-content">
+                <div class="chatbot-container">
+                    <div class="chatbot-sidebar">
+                        <h3>Frequently Asked</h3>
+                        <ul class="chat-suggestions">
+                            <li onclick="suggestChat('What is Section 66D of the IT Act?')">What is Section 66D of the IT Act?</li>
+                            <li onclick="suggestChat('How do I lock my Aadhaar biometrics?')">How do I lock my Aadhaar biometrics?</li>
+                            <li onclick="suggestChat('What is the 1930 helpline?')">What is the 1930 helpline?</li>
+                            <li onclick="suggestChat('Can police arrest me on video call?')">Can police arrest me on video call?</li>
+                            <li onclick="suggestChat('What does the DPDP Act 2023 say about biometric data?')">DPDP Act & Biometrics</li>
+                        </ul>
+                    </div>
+                    <div class="chat-area">
+                        <div class="chat-messages" id="chat-messages-container">
+                            <div class="chat-bubble bot">
+                                <div class="message-sender"><i class="fa-solid fa-robot"></i> Cyber Advisor</div>
+                                <div class="message-text">Hello! I am your I4C-trained Cyber Advisor. Ask me anything about the five case studies, preventive measures, or applicable Indian cyber laws.</div>
+                                <div class="message-time">Just now</div>
+                            </div>
+                        </div>
+                        <div class="chat-input-bar">
+                            <input type="text" id="chat-user-input" placeholder="Ask about cyber laws, helpline 1930, or case details...">
+                            <button id="chat-send-btn"><i class="fa-solid fa-paper-plane"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+        </main>
+    </div>
+
+    <!-- Student Config Modal -->
+    <div class="modal-backdrop" id="student-modal">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3>Configure Student Information</h3>
+                <button class="close-modal-btn" id="close-modal-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Provide your details to customize the student profile display in this digital portfolio.</p>
+                <div class="form-group">
+                    <label for="input-student-name">Student Name:</label>
+                    <input type="text" id="input-student-name" value="Prince" placeholder="Enter your full name">
+                </div>
+                <div class="form-group">
+                    <label for="input-enrollment-no">Enrollment Number:</label>
+                    <input type="text" id="input-enrollment-no" value="20260711001" placeholder="Enter enrollment number">
+                </div>
+                <div class="form-group">
+                    <label for="input-semester">Semester:</label>
+                    <input type="text" id="input-semester" value="7">
+                </div>
+                <div class="form-group">
+                    <label for="input-academic-year">Academic Year:</label>
+                    <input type="text" id="input-academic-year" value="2026-2027">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" id="cancel-modal-btn">Cancel</button>
+                <button class="btn btn-primary" id="save-modal-btn">Save & Update</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- External script references -->
+    <script src="cases-data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
