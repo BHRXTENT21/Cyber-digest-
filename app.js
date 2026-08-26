@@ -17,7 +17,6 @@ document.addEventListener("DOMContentLoaded", () => {
 function initApp() {
     updateStudentDisplay();
     setupTabNavigation();
-    setupConfigModal();
     renderDashboardCases();
     renderCaseExplorer();
     renderLawMapper();
@@ -27,44 +26,10 @@ function initApp() {
 
 // UPDATE DOM WITH STUDENT PROFILE
 function updateStudentDisplay() {
-    document.getElementById("display-student-name").textContent = studentState.name;
-    document.getElementById("display-enrollment").textContent = `Enrollment: ${studentState.enrollment}`;
-    
-}
-
-// CONFIGURATION MODAL
-function setupConfigModal() {
-    const modal = document.getElementById("student-modal");
-    const openBtn = document.getElementById("open-config-btn");
-    const closeBtn = document.getElementById("close-modal-btn");
-    const cancelBtn = document.getElementById("cancel-modal-btn");
-    const saveBtn = document.getElementById("save-modal-btn");
-
-    openBtn.addEventListener("click", () => {
-        document.getElementById("input-student-name").value = studentState.name;
-        document.getElementById("input-enrollment-no").value = studentState.enrollment;
-        document.getElementById("input-semester").value = studentState.semester;
-        document.getElementById("input-academic-year").value = studentState.year;
-        modal.classList.add("active");
-    });
-
-    const closeModal = () => modal.classList.remove("active");
-
-    closeBtn.addEventListener("click", closeModal);
-    cancelBtn.addEventListener("click", closeModal);
-
-    saveBtn.addEventListener("click", () => {
-        studentState.name = document.getElementById("input-student-name").value.trim() || studentState.name;
-        studentState.enrollment = document.getElementById("input-enrollment-no").value.trim() || studentState.enrollment;
-        studentState.semester = document.getElementById("input-semester").value.trim() || studentState.semester;
-        studentState.year = document.getElementById("input-academic-year").value.trim() || studentState.year;
-        
-        updateStudentDisplay();
-        closeModal();
-        
-        // Show notification that info has been updated
-        alert("Student information updated successfully!");
-    });
+    const nameEl = document.getElementById("display-student-name");
+    const enrollEl = document.getElementById("display-enrollment");
+    if (nameEl) nameEl.textContent = studentState.name;
+    if (enrollEl) enrollEl.textContent = `Enrollment: ${studentState.enrollment}`;
 }
 
 // TAB NAVIGATION
