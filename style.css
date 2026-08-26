@@ -1631,3 +1631,135 @@ body {
 ::-webkit-scrollbar-thumb:hover {
     background: rgba(255, 255, 255, 0.15);
 }
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 768px) {
+    .app-container {
+        flex-direction: column;
+        height: 100vh;
+        overflow: hidden;
+    }
+    
+    .sidebar {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+        z-index: 1000;
+    }
+    
+    .sidebar-brand {
+        padding: 15px;
+        border-bottom: none;
+    }
+    
+    .sidebar-nav {
+        padding: 0 15px 10px;
+        overflow-x: auto;
+        display: flex;
+        scrollbar-width: none; /* Firefox */
+    }
+    
+    .sidebar-nav::-webkit-scrollbar {
+        display: none; /* Safari and Chrome */
+    }
+    
+    .sidebar-nav ul {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .sidebar-nav li {
+        margin-bottom: 0;
+        padding: 10px 15px;
+        border-radius: 20px;
+        white-space: nowrap;
+    }
+    
+    .sidebar-nav li span {
+        display: inline-block;
+    }
+    
+    .sidebar-footer {
+        display: none;
+    }
+    
+    .main-content {
+        height: auto;
+        flex-grow: 1;
+        overflow-y: auto;
+    }
+
+    .top-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        height: auto;
+        padding: 15px 24px;
+    }
+    
+    .header-actions {
+        width: 100%;
+    }
+    
+    .stats-grid, .laws-grid, .ethics-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .case-explorer-layout {
+        flex-direction: column;
+    }
+    
+    .case-list {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+        max-height: 250px;
+    }
+    
+    .case-content {
+        width: 100%;
+    }
+    
+    .simulator-container {
+        flex-direction: column;
+    }
+    
+    .simulator-sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+        max-height: 250px;
+    }
+    
+    .simulator-main {
+        width: 100%;
+    }
+    
+    .cyber-advisor-container {
+        flex-direction: column;
+    }
+    
+    .advisor-sidebar {
+        display: none; /* Hide advisor sidebar on mobile to maximize chat space */
+    }
+    
+    .chat-interface {
+        width: 100%;
+    }
+    
+    .welcome-banner {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+        gap: 15px;
+    }
+    
+    .banner-badge {
+        margin-top: 10px;
+    }
+}
